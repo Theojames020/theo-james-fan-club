@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="An independent fan community celebrating actor Theo James, his work and performances.">
+  <meta name="theme-color" content="#0b0b0b">
+  <title>Theo James Fan Club | Independent Fan Community</title>
+  <style>
+    :root{--bg:#0b0b0b;--panel:#151515;--gold:#d6b46a;--gold2:#f0d99c;--muted:#b6b0a3;--line:#383127;--white:#f7f3ea}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--bg);color:var(--white);font-family:Georgia,'Times New Roman',serif;line-height:1.6}
+    a{color:inherit;text-decoration:none}.wrap{width:min(1120px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:5;background:rgba(10,10,10,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:17px 0}.brand{font-size:1.05rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold2)}
+    .brand small{display:block;font:10px Arial,sans-serif;letter-spacing:.24em;color:var(--muted);margin-top:3px}
+    nav{display:flex;gap:22px;flex-wrap:wrap;font:12px Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#ddd}
+    nav a:hover,.text-link:hover{color:var(--gold2)}
+    .hero{min-height:620px;display:grid;align-items:center;position:relative;overflow:hidden;border-bottom:1px solid var(--line);background:radial-gradient(ellipse at 76% 40%,rgba(191,150,68,.22),transparent 36%),linear-gradient(115deg,#090909 12%,#17130d 62%,#090909)}
+    .hero:after{content:"";position:absolute;right:-7%;top:6%;width:52%;height:90%;border:1px solid rgba(214,180,106,.28);transform:rotate(8deg);border-radius:48% 48% 8% 8%;box-shadow:0 0 0 28px rgba(214,180,106,.025),0 0 0 56px rgba(214,180,106,.02)}
+    .hero-inner{position:relative;z-index:1;padding:80px 0;max-width:700px}
+    .eyebrow{font:11px Arial,sans-serif;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-bottom:22px}
+    h1{font-size:clamp(3rem,8vw,6.6rem);line-height:.98;font-weight:400;letter-spacing:-.04em;margin:0 0 24px}
+    h1 span{display:block;color:var(--gold2);font-style:italic}
+    .lead{font-size:1.15rem;color:#d1c9b8;max-width:570px}
+    .actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}
+    .btn{display:inline-block;padding:13px 22px;border:1px solid var(--gold);font:11px Arial,sans-serif;letter-spacing:.15em;text-transform:uppercase;transition:.2s}
+    .btn.primary{background:var(--gold);color:#14110b}.btn:hover{background:var(--gold2);color:#111}
+    section{padding:82px 0;border-bottom:1px solid var(--line)}.section-head{max-width:680px;margin-bottom:35px}
+    h2{font-size:clamp(2rem,4vw,3.1rem);font-weight:400;line-height:1.1;margin:0 0 14px}
+    h2 em{color:var(--gold2);font-weight:400}.sub{color:var(--muted);margin:0}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:linear-gradient(145deg,#191714,#101010);border:1px solid var(--line);padding:26px;min-height:190px}
+    .number{font:11px Arial,sans-serif;letter-spacing:.2em;color:var(--gold);margin-bottom:22px}
+    .card h3{font-size:1.45rem;font-weight:400;margin:0 0 10px}.card p{color:var(--muted);font-size:.96rem;margin:0}
+    .about{display:grid;grid-template-columns:1fr 1.2fr;gap:50px;align-items:center}
+    .portrait{min-height:390px;border:1px solid var(--gold);background:radial-gradient(ellipse at 50% 35%,rgba(214,180,106,.25),transparent 38%),linear-gradient(145deg,#272016,#090909);display:flex;align-items:end;justify-content:center;padding:25px;text-align:center;color:var(--gold2);letter-spacing:.16em;font:11px Arial,sans-serif;text-transform:uppercase}
+    .about-copy p{color:#c9c2b5}.notice{font:12px Arial,sans-serif;color:var(--muted);border-left:2px solid var(--gold);padding:12px 16px;margin-top:22px;background:#15130f}
+    .updates{display:grid;grid-template-columns:1fr 1fr;gap:18px}.update{padding:24px;border:1px solid var(--line);background:#121212}
+    .update time{font:10px Arial,sans-serif;color:var(--gold);letter-spacing:.18em;text-transform:uppercase}
+    .update h3{font-size:1.4rem;font-weight:400;margin:12px 0 8px}.update p{color:var(--muted);margin:0}
+    .fanbox{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:start}
+    form{display:grid;gap:12px}input,textarea{width:100%;background:#111;border:1px solid var(--line);color:var(--white);padding:14px;font:14px Arial,sans-serif;border-radius:0}
+    textarea{min-height:115px;resize:vertical}button{cursor:pointer}
+    .post{border-bottom:1px solid var(--line);padding:14px 0}.post strong{color:var(--gold2)}.post p{margin:5px 0;color:#d0c8ba;white-space:pre-wrap}
+    .small{font:11px Arial,sans-serif;color:var(--muted)}
+    footer{padding:34px 0;color:var(--muted);font:11px Arial,sans-serif;letter-spacing:.06em}
+    footer .foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    @media(max-width:760px){.nav{align-items:flex-start;flex-direction:column}nav{gap:13px}.hero{min-height:560px}.hero:after{right:-28%;width:78%;opacity:.55}.grid{grid-template-columns:1fr}.about,.fanbox,.updates{grid-template-columns:1fr}.portrait{min-height:270px}section{padding:60px 0}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#home">Theo James Fan Club<small>Independent fan community</small></a>
+    <nav aria-label="Main navigation">
+      <a href="#about">About</a><a href="#highlights">Highlights</a><a href="#updates">Updates</a><a href="#community">Community</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <section class="hero" id="home">
+    <div class="wrap hero-inner">
+      <div class="eyebrow">A celebration of talent &amp; screen presence</div>
+      <h1>THEO <span>JAMES</span></h1>
+      <p class="lead">A fan-made space for celebrating the performances, projects and career of Theo James — and connecting with fellow fans.</p>
+      <div class="actions"><a class="btn primary" href="#community">Join the conversation</a><a class="btn" href="#about">Explore the fan page</a></div>
+    </div>
+  </section>
+  <section id="about">
+    <div class="wrap about">
+      <div class="portrait">Fan page visual area<br>Replace with an image you have permission to use</div>
+      <div class="about-copy">
+        <div class="eyebrow">About the actor</div>
+        <h2>Celebrating <em>Theo James</em></h2>
+        <p>Theo James is an English actor known for roles across film and television, including the <em>Divergent</em> film series and the television series <em>The White Lotus</em> and <em>Sanditon</em>.</p>
+        <p>This independent fan club is a place to share appreciation for his work, discuss performances and keep up with publicly announced projects.</p>
+        <div class="notice"><strong>Fan-site notice:</strong> This website is independently created by fans. It is not official, is not managed by Theo James or his representatives, and does not imply his endorsement.</div>
+      </div>
+    </div>
+  </section>
+  <section id="highlights">
+    <div class="wrap">
+      <div class="section-head"><div class="eyebrow">Discover &amp; discuss</div><h2>Inside the <em>fan club</em></h2><p class="sub">A few starting points for fans to explore and talk about.</p></div>
+      <div class="grid">
+        <article class="card"><div class="number">01 / CAREER</div><h3>Film &amp; television</h3><p>Share your favourite performances and discuss the characters that made an impression.</p></article>
+        <article class="card"><div class="number">02 / COMMUNITY</div><h3>Fan conversations</h3><p>Meet other fans, exchange recommendations and keep discussions respectful.</p></article>
+        <article class="card"><div class="number">03 / UPDATES</div><h3>News &amp; announcements</h3><p>Follow verified public announcements and link back to reliable sources.</p></article>
+      </div>
+    </div>
+  </section>
+  <section id="updates">
+    <div class="wrap">
+      <div class="section-head"><div class="eyebrow">The noticeboard</div><h2>Fan <em>updates</em></h2><p class="sub">Use this area for dated posts with links to original announcements. No unverified rumours.</p></div>
+      <div class="updates" id="newsList"></div>
+    </div>
+  </section>
+  <section id="community">
+    <div class="wrap">
+      <div class="section-head"><div class="eyebrow">Your voice matters</div><h2>The fan <em>community</em></h2><p class="sub">Leave a message for other visitors. On this preview, posts are saved only in this browser.</p></div>
+      <div class="fanbox">
+        <div>
+          <form id="fanForm">
+            <input id="fanName" maxlength="40" placeholder="Your display name" required>
+            <textarea id="fanMessage" maxlength="500" placeholder="What do you appreciate most about Theo's work?" required></textarea>
+            <button class="btn primary" type="submit">Post a message</button>
+          </form>
+          <p class="small">Please be kind. Do not post private contact details, impersonate anyone, or share unverified claims.</p>
+        </div>
+        <div><h3 style="font-weight:400;margin-top:0">Fan messages</h3><div id="posts"><p class="small">Be the first to leave a message.</p></div></div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap foot"><span>© <span id="year"></span> Theo James Fan Club</span><span>Independent fan-made website · Not affiliated with Theo James</span></div></footer>
+<script>
+  const form=document.getElementById('fanForm'), posts=document.getElementById('posts');
+  document.getElementById('year').textContent=new Date().getFullYear();
+  async function loadNews(){
+    const target=document.getElementById('newsList');
+    try{
+      const response=await fetch('/content/news.json',{cache:'no-store'});
+      if(!response.ok) throw new Error('News file unavailable');
+      const data=await response.json();
+      const items=(data.posts||[]).filter(p=>p.published!==false).sort((a,b)=>new Date(b.date)-new Date(a.date));
+      if(!items.length){target.innerHTML='<p class="small">New fan updates will appear here soon.</p>';return;}
+      target.innerHTML='';
+      items.forEach(item=>{
+        const article=document.createElement('article');article.className='update';
+        const time=document.createElement('time');time.textContent=item.date||'Fan update';
+        const heading=document.createElement('h3');heading.textContent=item.title||'Fan update';
+        const body=document.createElement('p');body.textContent=item.body||'';
+        article.append(time,heading,body);
+        if(item.source_url){
+          const link=document.createElement('a');link.className='text-link';link.href=item.source_url;
+          link.target='_blank';link.rel='noopener noreferrer';link.textContent='Read original source ↗';
+          link.style.cssText='display:inline-block;margin-top:14px;color:var(--gold2);font:11px Arial,sans-serif;letter-spacing:.08em';
+          article.append(link);
+        }
+        target.append(article);
+      });
+    }catch(e){
+      target.innerHTML='<p class="small">Fan updates will be added soon.</p>';
+    }
+  }
+  loadNews();
+
+  function loadPosts(){
+    const saved=JSON.parse(localStorage.getItem('tjfc_posts')||'[]');
+    posts.innerHTML='';
+    if(!saved.length){posts.innerHTML='<p class="small">Be the first to leave a message.</p>';return;}
+    saved.slice().reverse().forEach(item=>{
+      const div=document.createElement('div');div.className='post';
+      const strong=document.createElement('strong');strong.textContent=item.name;
+      const p=document.createElement('p');p.textContent=item.message;
+      div.append(strong,p);posts.append(div);
+    });
+  }
+  form.addEventListener('submit',e=>{
+    e.preventDefault();
+    const name=document.getElementById('fanName').value.trim();
+    const message=document.getElementById('fanMessage').value.trim();
+    if(!name||!message)return;
+    const saved=JSON.parse(localStorage.getItem('tjfc_posts')||'[]');
+    saved.push({name,message});localStorage.setItem('tjfc_posts',JSON.stringify(saved.slice(-30)));
+    form.reset();loadPosts();
+  });
+  loadPosts();
+</script>
+</body>
+</html>
