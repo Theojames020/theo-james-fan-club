@@ -1,0 +1,29 @@
+
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "updates"
+    label: "Fan Updates"
+    files:
+      - name: "news"
+        label: "Fan News and Announcements"
+        file: "content/news.json"
+        fields:
+          - label: "Updates"
+            name: "updates"
+            widget: "list"
+            fields:
+              - label: "Title"
+                name: "title"
+                widget: "string"
+              - label: "Date"
+                name: "date"
+                widget: "datetime"
+              - label: "Description"
+                name: "body"
+                widget: "text"
